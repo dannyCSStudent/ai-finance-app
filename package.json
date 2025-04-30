@@ -2,6 +2,9 @@
   "name": "ai-finance-app",
   "private": true,
   "scripts": {
+    "mobile": "turbo run mobile",
+    "mobile:android": "turbo run mobile:android",
+    "build:mobile:dev": "turbo run build:mobile:dev",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
