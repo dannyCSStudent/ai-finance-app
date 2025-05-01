@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "paths": {
+      "@repo/ui": ["./packages/ui/src/index"],
+      "@repo/ui/*": ["./packages/ui/src/*"],
+      "@repo/api-types": ["./packages/api-types/src/index"],
+      "@repo/api-types/*": ["./packages/api-types/src/*"],
+      "@repo/database": ["./packages/database/src/index"],
+      "@repo/database/*": ["./packages/database/src/*"],
+      "@repo/tailwind-config": ["./packages/tailwind-config/index"]
+    }
+  }
+}

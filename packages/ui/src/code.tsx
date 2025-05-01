@@ -1,11 +1,16 @@
-import { type JSX } from "react";
+import React from 'react';
 
-export function Code({
-  children,
-  className,
-}: {
+interface CodeProps {
   children: React.ReactNode;
-  className?: string;
-}): JSX.Element {
-  return <code className={className}>{children}</code>;
+  language?: string;
 }
+
+export const Code = ({ children, language }: CodeProps) => {
+  return (
+    <pre className="bg-gray-100 p-4 rounded overflow-x-auto">
+      <code className={language ? `language-${language}` : ''}>
+        {children}
+      </code>
+    </pre>
+  );
+};

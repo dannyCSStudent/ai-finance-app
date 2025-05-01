@@ -7,21 +7,29 @@
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
+    "build": "tsup index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup index.tsx --format esm,cjs --watch --dts --external react",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-native": "0.76.9"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@repo/tailwind-config": "workspace:*",
     "@turbo/gen": "^2.5.0",
-    "@types/node": "^22.15.3",
-    "@types/react": "19.1.0",
-    "@types/react-dom": "19.1.1",
-    "eslint": "^9.25.0",
+    "@types/node": "^22.14.0",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.1",
+    "eslint": "^9.24.0",
+    "tailwindcss": "^4.1.4",
     "typescript": "5.8.2"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "nativewind": "^4.1.23"
   }
 }

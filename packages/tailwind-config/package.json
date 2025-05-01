@@ -1,0 +1,19 @@
+{
+  "name": "@repo/tailwind-config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup index.ts --format esm,cjs --dts --external react",
+    "dev": "tsup index.ts --format esm,cjs --watch --dts --external react"
+  },
+  "dependencies": {
+    "nativewind": "^4.1.23",
+    "tailwindcss": "3.4.17"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
